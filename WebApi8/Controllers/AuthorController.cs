@@ -44,7 +44,7 @@ namespace WebApi8.Controllers
             return Ok(authors);
         }
 
-        [HttpPut("UpdateAuthor/")]
+        [HttpPut("UpdateAuthor")]
         public async Task<ActionResult<ResponseModel<List<AuthorModel>>>> UpdateAuthor(AuthorUpdateDto authorUpdateDto)
         {
             var authors = await _authorInterface.UpdateAuthor(authorUpdateDto);
